@@ -1,0 +1,188 @@
+/* src/styles.css */
+
+/* Variables for colors and sizes */
+:root {
+  --primary-color: #6f42c1; /* BTS purple */
+  --secondary-color: #5a34a3; /* Darker purple for hover */
+  --background-color: #f9f9f9; /* Light background for contrast */
+  --card-bg-start: #e0e0e0; /* Card gradient start */
+  --card-bg-end: #ffffff; /* Card gradient end */
+  --hover-card-bg-start: #d8d8d8; /* Hover card gradient start */
+  --hover-card-bg-end: #f0f0f0; /* Hover card gradient end */
+  --text-color: #555; /* Default text color */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+/* src/pages/ProductPage.css */
+
+.container {
+  padding: 20px; /* Padding for the container */
+}
+
+.card {
+  background-color: #ffffff; /* White background for card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.product-image {
+  width: 100px; /* Set a specific width for product images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between image and text */
+}
+
+.size-select {
+  margin-left: 10px; /* Space between size dropdown and button */
+}
+
+
+/* General Container Styling */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(145deg, var(--card-bg-start), var(--card-bg-end));
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px var(--shadow-color), -5px -5px 15px rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  margin: 20px 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  overflow: hidden;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(5deg);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3), -10px -10px 25px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(145deg, var(--hover-card-bg-start), var(--hover-card-bg-end)); /* Fixed */
+}
+
+
+/* Headings */
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Unordered List Styling */
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+ul li:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+ul li i {
+  color: var(--primary-color);
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* Paragraph Styling */
+p {
+  line-height: 1.8;
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+/* Button Styling */
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Cart Info */
+.cart-info {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-info i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* List Item Paragraph */
+ul li p {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-weight: bold;
+}
+.remove-from-cart-btn {
+  background-color: #e74c3c; /* Red background for the remove button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  ul li {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
